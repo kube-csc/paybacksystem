@@ -29,6 +29,12 @@
     <!-- Template Main CSS File -->
     <link href="assets/css/style.css" rel="stylesheet">
 
+    <style>
+        #hero {
+            margin-bottom: -90px;
+        }
+    </style>
+
     <!-- =======================================================
     * Template Name: Anyar - v2.1.0
     * Template URL: https://bootstrapmade.com/anyar-free-multipurpose-one-page-bootstrap-theme/
@@ -43,13 +49,13 @@
 <header id="header" class="fixed-top ">
     <div class="container d-flex align-items-center">
 
-        <h1 class="logo mr-auto"><a href="#header" class="scrollto">{!! str_replace('_' , ' ' , env('APP_Projektname')) !!}</a></h1>
+        <h1 class="logo mr-auto"><a href="/" class="scrollto">{!! str_replace('_' , ' ' , env('APP_Projektname')) !!}</a></h1>
         <!-- Uncomment below if you prefer to use an image logo -->
         <!-- <a href="#header" class="logo mr-auto scrollto"><img src="assets/img/logo.png" alt="" class="img-fluid"></a>-->
 
         <nav class="nav-menu d-none d-lg-block">
             <ul>
-                <li class="active"><a href="#header">Home</a></li>
+                <li class="active"><a href="/#header">Home</a></li>
             </ul>
         </nav><!-- .nav-menu -->
 
@@ -59,48 +65,48 @@
 <!-- ======= Hero Section ======= -->
 <section id="hero" class="d-flex justify-cntent-center align-items-center">
     <div id="heroCarousel" class="container carousel carousel-fade" data-ride="carousel">
-
-        <!-- Slide 1 -->
-        <div class="carousel-item active">
-            <div class="carousel-container">
-                <h2 class="animate__animated animate__fadeInDown">Willkommen bei <span>{!! str_replace('_' , ' ' , env('APP_Projektname')) !!}</span></h2>
-                <p class="animate__animated animate__fadeInUp">{!! str_replace('_' , ' ' , env('APP_Slogan')) !!}</p>
-                <a href="#about" class="btn-get-started animate__animated animate__fadeInUp scrollto">mehr</a>
+        @if(env('APP_Projektname')!='' | env('APP_Slogan')!='')
+            <!-- Slide 1 -->
+            <div class="carousel-item active">
+                <div class="carousel-container">
+                    <h2 class="animate__animated animate__fadeInDown">Willkommen bei <span>{!! str_replace('_' , ' ' , env('APP_Projektname')) !!}</span></h2>
+                    <p class="animate__animated animate__fadeInUp">{!! str_replace('_' , ' ' , env('APP_Slogan')) !!}</p>
+                    <a href="#about" class="btn-get-started animate__animated animate__fadeInUp scrollto">mehr</a>
+                </div>
             </div>
-        </div>
-
-        <!-- Slide 2 -->
-        <div class="carousel-item">
-            <div class="carousel-container">
-                <h2 class="animate__animated animate__fadeInDown">{!! str_replace('_' , ' ' , env('APP_Titel1')) !!}</h2>
-                <p class="animate__animated animate__fadeInUp">{!! str_replace('_' , ' ' , env('APP_Slogan1')) !!}</p>
-                <a href="#about" class="btn-get-started animate__animated animate__fadeInUp scrollto">mehr</a>
+        @endif
+        @if(env('APP_Titel1')!='' | env('APP_Slogan1')!='')
+            <!-- Slide 2 -->
+            <div class="carousel-item">
+                <div class="carousel-container">
+                    <h2 class="animate__animated animate__fadeInDown">{!! str_replace('_' , ' ' , env('APP_Titel1')) !!}</h2>
+                    <p class="animate__animated animate__fadeInUp">{!! str_replace('_' , ' ' , env('APP_Slogan1')) !!}</p>
+                    <a href="#about" class="btn-get-started animate__animated animate__fadeInUp scrollto">mehr</a>
+                </div>
             </div>
-        </div>
-
-        <!-- Slide 3 -->
-        <div class="carousel-item">
-            <div class="carousel-container">
-                <h2 class="animate__animated animate__fadeInDown">{!! str_replace('_' , ' ' , env('APP_Titel2')) !!}</h2>
-                <p class="animate__animated animate__fadeInUp">{!! str_replace('_' , ' ' , env('APP_Slogan2')) !!}</p>
-                <a href="#about" class="btn-get-started animate__animated animate__fadeInUp scrollto">mehr</a>
+        @endif
+        @if(env('APP_Titel2')!='' | env('APP_Slogan2')!='')
+            <!-- Slide 3 -->
+            <div class="carousel-item">
+                <div class="carousel-container">
+                    <h2 class="animate__animated animate__fadeInDown">{!! str_replace('_' , ' ' , env('APP_Titel2')) !!}</h2>
+                    <p class="animate__animated animate__fadeInUp">{!! str_replace('_' , ' ' , env('APP_Slogan2')) !!}</p>
+                    <a href="#about" class="btn-get-started animate__animated animate__fadeInUp scrollto">mehr</a>
+                </div>
             </div>
-        </div>
-
+        @endif
         <a class="carousel-control-prev" href="#heroCarousel" role="button" data-slide="prev">
             <span class="carousel-control-prev-icon bx bx-chevron-left" aria-hidden="true"></span>
             <span class="sr-only">Previous</span>
         </a>
-
         <a class="carousel-control-next" href="#heroCarousel" role="button" data-slide="next">
             <span class="carousel-control-next-icon bx bx-chevron-right" aria-hidden="true"></span>
             <span class="sr-only">Next</span>
         </a>
-
     </div>
 </section><!-- End Hero -->
 
-@section('content')
+@yield('content')
 
 <!-- ======= Footer ======= -->
 <footer id="footer">
@@ -108,19 +114,19 @@
     <div class="footer-top">
         <div class="container">
             <div class="row">
-
                 <div class="col-lg-3 col-md-6 footer-contact">
                     <h4>Kontakt</h4>
                     <p>
-                        {!! str_replace('_' , ' ' , env('APP_Firmenname')) !!}<br>
-                        {!! str_replace('_' , ' ' , env('APP_Strasse')) !!}<br>
-                        {!! str_replace('_' , ' ' , env('APP_PLZ')) !!} {!! str_replace('_' , ' ' , env('APP_Ort')) !!}<br><br>
-                        <strong>Telefon:</strong> {!! str_replace('_' , ' ' , env('APP_Telefon')) !!}<br>
-                        <strong>Email:</strong> {!! str_replace('_' , ' ' , env('APP_Email')) !!}<br>
-                        <strong>MWST Steuernummer:</strong> {!! str_replace('_' , ' ' , env('APP_Steuernummer')) !!}
+                        {!! str_replace('_' , ' ' , env('APP_Firmenname')) !!}
+                        <br>{!! str_replace('_' , ' ' , env('APP_Strasse')) !!}
+                        <br>{!! str_replace('_' , ' ' , env('APP_PLZ')) !!} {!! str_replace('_' , ' ' , env('APP_Ort')) !!}
+                        <br><br><i class="icofont-phone"></i> {!! str_replace('_' , ' ' , env('APP_Telefon')) !!}
+                        <br><i class="icofont-envelope"></i> {!! str_replace('_' , ' ' , env('APP_Email')) !!}
                     </p>
                 </div>
-
+                <div class="col-lg-3 col-md-6 footer-info">
+                  <!-- freie Spalte im Footer-->
+                </div>
                 @if(env('APP_Sozialmediaanzeigen')=='ja')
                     <div class="col-lg-3 col-md-6 footer-info">
                         <h3>Soziale Media</h3>
@@ -142,6 +148,9 @@
                               <a href="{!! env('APP_Sozial_linkedin') !!}" target="_blank" class="linkedin"><i class="bx bxl-linkedin"></i></a>
                             @endif
                         </div>
+                        <br><br>
+                        <h3>Intern</h3>
+                        <a href="/login">Login</a>
                     </div>
                 @endif
             </div>
@@ -150,7 +159,8 @@
 
     <div class="container">
         <div class="copyright">
-            &copy; Copyright <strong><span>{!! str_replace('_' , ' ' , env('APP_Copyright')) !!}</span></strong>. All Rights Reserved
+            &copy; Copyright <strong><span>{!! str_replace('_' , ' ' , env('APP_Copyright')) !!}</span></strong>. All Rights Reserved<br>
+            <a href="/Impressum">Impressum</a>
         </div>
 
     </div>

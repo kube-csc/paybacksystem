@@ -16,11 +16,32 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('home/home');
 });
+
+Route::get('/Impressum', function () {
+    return view('home/inprint');
+});
+
 Route::get('/Blog', function () {
     return view('home/blog-single');
 });
 
+/*
+Route::get('/dashboard', function () {
+    return view('dashboard');
+})->name('dashboard');
+*/
 
+Route::middleware([
+    'auth:sanctum',
+    config('jetstream.auth_session'),
+    'verified'
+])->group(function () {
+    Route::get('/dashboard', function () {
+        return view('test');
+    })->name('test');
+});
+
+/*
 Route::middleware([
     'auth:sanctum',
     config('jetstream.auth_session'),
@@ -30,3 +51,5 @@ Route::middleware([
         return view('dashboard');
     })->name('dashboard');
 });
+*/
+
