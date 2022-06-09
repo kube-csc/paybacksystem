@@ -21,10 +21,6 @@ Route::get('/Impressum', function () {
     return view('home/inprint');
 });
 
-Route::get('/Blog', function () {
-    return view('home/blog-single');
-});
-
 /*
 Route::get('/dashboard', function () {
     return view('dashboard');

@@ -1,3 +1,39 @@
+<h1>Paybacksystem</h1>
+<p>Beispiel: <a href="http://www.vereins-partner.de/">Beispiel eines Frontend</a>
+</p> 
+
+<h2>Installierte Programme / Templets</h2>
+<ul>
+  <li>Insallation Laravel 8.* mit jetstream 2.* , livewire 2.* teams  und tailwindcss
+  <a href="https://jetstream.laravel.com/2.x/introduction.html"></a>
+  <a href="https://jetstream.laravel.com/2.x/stacks/livewire.html"></a></li>
+  <li><a href="https://boxicons.com/">boxicons </a></li>
+  <li><a href="https://tailwindcss.com/">Tailwindcss</a></li>
+  <li><a href="https://bootstrapmade.com/anyar-free-multipurpose-one-page-bootstrap-theme/">BootstrapMade.com </a></li>
+  <li>.htaccess für 1und1 Server</li>
+</ul>
+
+<h2>Benötigte Lizenzen</h2>
+Es wird eine Lizenz für
+<a href="https://bootstrapmade.com/anyar-free-multipurpose-one-page-bootstrap-theme/">Anyar - v2.1.0 von bootstrapmade</a>
+benötigt.
+
+<h2>Installation</h2>
+<ul>
+   <li>git clone https://github.com/kube-csc/paybacksystem.git</li>
+   <li>composer.phar install</li>
+   <li>.env Datei ausfüllen (Es werden auch Informationen über den Verein abgefragt.)</li>
+   <li>composer.phar install</li>
+   <li>anlegen der "bildmaterial.blade.php" im Ordner "paybacksystem\resources\views\_partials\" mit der Vorlage "bildmaterial_example.blade.php"</li>
+   <li>anlegen der "recht.blade.php" im Ordner "paybacksystem\resources\views\_partials\" mit der Vorlage "recht_example.blade.php"</li>    
+   <li>php artisan migrate:fresh --seed Datenbank</li>
+</ul>
+
+<h2>Update</h2>
+<ul>
+   <li>git pull origin main</li>
+</ul>
+
 <p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400"></a></p>
 
 <p align="center">
