@@ -24,8 +24,9 @@ benötigt.
    <li>composer.phar install</li>
    <li>.env Datei ausfüllen (Es werden auch Informationen über den Verein abgefragt.)</li>
    <li>composer.phar install</li>
-   <li>anlegen der "bildmaterial.blade.php" im Ordner "paybacksystem\resources\views\_partials\" mit der Vorlage "bildmaterial_example.blade.php"</li>
-   <li>anlegen der "recht.blade.php" im Ordner "paybacksystem\resources\views\_partials\" mit der Vorlage "recht_example.blade.php"</li>    
+   <li>anlegen der "bildmaterial.blade.php" im Ordner "paybacksystem\resources\views\_partials\" mit der Vorlage "bildmaterial_example.blade.php" und Verwende Bilder Quellen eingeben</li>
+   <li>anlegen der "recht.blade.php" im Ordner "paybacksystem\resources\views\_partials\" mit der Vorlage "recht_example.blade.php" und Haftungsauschluss / Urheberrechte auf der Impressumseite eingeben</li>    
+   <li>anlegen der "termsOfUse.blade.php" im Ordner "paybacksystem\resources\views\_partials\" mit der Vorlage "termsOfUse_example.blade.php" und Nutzungsbedingungen / DSGVO eingeben</li>       
    <li>php artisan migrate:fresh --seed Datenbank</li>
 </ul>
 

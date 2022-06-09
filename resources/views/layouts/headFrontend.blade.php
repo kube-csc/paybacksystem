@@ -160,7 +160,7 @@
     <div class="container">
         <div class="copyright">
             &copy; Copyright <strong><span>{!! str_replace('_' , ' ' , env('APP_Copyright')) !!}</span></strong>. All Rights Reserved<br>
-            <a href="/Impressum">Impressum</a>
+            <a href="/Nutzungsbedingungen">Nutzungsbedingungen und Datenschutz</a> | <a href="/Impressum">Impressum</a>
         </div>
 
     </div>

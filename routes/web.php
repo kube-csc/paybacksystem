@@ -21,6 +21,10 @@ Route::get('/Impressum', function () {
     return view('home/inprint');
 });
 
+Route::get('/Nutzungsbedingungen', function () {
+    return view('home/termsOfUse');
+});
+
 /*
 Route::get('/dashboard', function () {
     return view('dashboard');
